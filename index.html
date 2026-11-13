@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Photography Here — Learn. Create. Grow. | Photography education by Joshua Sokoya</title>
+<meta name="description" content="Practical, real-world photography education: online courses, in-person workshops and a creative community for photographers who want to create with intention. By Joshua Sokoya.">
+<meta name="theme-color" content="#101113">
+<meta property="og:title" content="Photography Here — Master the art of photography">
+<meta property="og:description" content="Courses, workshops and a community for photographers who want to create with intention.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/img/rim.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@600;700;800&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="assets/img/rim-cut.webp" type="image/webp">
+<link rel="stylesheet" href="assets/css/style.css">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+
+<!-- LOADER -->
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="loader__inner">
+    <span class="loader__mark"><i></i>Photography<br>Here</span>
+    <span class="loader__count"><b id="loaderNum">000</b><em>/ 100</em></span>
+  </div>
+  <div class="loader__bar"><span id="loaderBar"></span></div>
+</div>
+
+<div class="cursor" id="cursor" aria-hidden="true"><span class="cursor__dot"></span><span class="cursor__ring"><em id="cursorLabel"></em></span></div>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- NAV -->
+<header class="nav" id="nav">
+  <a class="wordmark" href="#top" aria-label="Photography Here — home">
+    <i class="wordmark__bar"></i>
+    <span class="wordmark__txt">Photography<br>Here</span>
+    <small class="wordmark__by">by Joshua Sokoya</small>
+  </a>
+  <nav class="nav__links" aria-label="Primary">
+    <a href="#courses" data-cursor="Go">Courses</a>
+    <a href="#workshops" data-cursor="Go">Workshops</a>
+    <a href="#community" data-cursor="Go">Community</a>
+    <a href="#journal" data-cursor="Go">Journal</a>
+    <a href="#shop" data-cursor="Go">Shop</a>
+    <a href="#about" data-cursor="Go">About</a>
+  </nav>
+  <div class="nav__actions">
+    <button class="icon-btn" aria-label="Search"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg></button>
+    <a class="btn btn--primary btn--sm magnetic" href="#community">Join the community</a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- MOBILE MENU -->
+<div class="menu" id="menu" aria-hidden="true">
+  <div class="menu__inner">
+    <p class="eyebrow eyebrow--light"><i></i>Menu</p>
+    <nav class="menu__links" aria-label="Mobile">
+      <a href="#courses"><span>01</span>Courses</a>
+      <a href="#workshops"><span>02</span>Workshops</a>
+      <a href="#community"><span>03</span>Community</a>
+      <a href="#journal"><span>04</span>Journal</a>
+      <a href="#shop"><span>05</span>Shop</a>
+      <a href="#about"><span>06</span>About</a>
+    </nav>
+    <div class="menu__foot">
+      <a class="btn btn--primary" href="#community">Join the community</a>
+      <p>Learn. Create. Grow.<br><a href="https://www.joshuasokoya.com" target="_blank" rel="noopener">joshuasokoya.com ↗</a> · <a href="notes.html">Concept notes ↗</a></p>
+    </div>
+  </div>
+  <img class="menu__img" src="assets/img/silhouette-sm.webp" alt="" aria-hidden="true">
+</div>
+
+<main id="main">
+
+<!-- HERO -->
+<section class="hero" id="top" aria-label="Introduction">
+  <div class="hero__bg" aria-hidden="true"></div>
+  <h1 class="hero__word" id="heroWord" aria-label="Photography Here"><span>PHOTO</span><span>GRAPHY</span></h1>
+  <div class="hero__stage" id="heroStage">
+    <img class="hero__cut" id="heroCut" src="assets/img/rim-cut.webp" width="1400" height="2099" alt="Portrait of a woman with an afro, eyes closed, her hair rim-lit against a black studio background" fetchpriority="high">
+  </div>
+  <div class="hero__glow" id="heroGlow" aria-hidden="true"></div>
+  <div class="hero__grain" aria-hidden="true"></div>
+
+  <span class="hero__here" aria-hidden="true">HERE<sup>by Joshua Sokoya</sup></span>
+
+  <div class="hero__copy">
+    <p class="eyebrow eyebrow--light"><i></i>Learn. Create. Grow.</p>
+    <h2 class="hero__title">Master the art of photography.</h2>
+    <p class="hero__lede">Practical education for photographers who want to create with intention. Courses, workshops and a community built around real light and real work.</p>
+    <div class="hero__cta">
+      <a class="btn btn--primary magnetic" href="#courses">Explore courses <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="btn btn--ghost magnetic" href="#community">Join the community</a>
+    </div>
+  </div>
+
+  <aside class="hero__meta" aria-hidden="true">
+    <span class="hero__tag">Rim light<br>Low-key portrait</span>
+    <span class="hero__hint"><i></i>Move your light</span>
+  </aside>
+  <a class="hero__scroll" href="#manifesto" aria-label="Scroll to content"><span></span>Scroll</a>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__track">
+    <span>Learn.</span><b>✺</b><span>Create.</span><b>✺</b><span>Grow.</span><b>✺</b><span>Light</span><b>✺</b><span>Shadow</span><b>✺</b><span>Intention</span><b>✺</b>
+    <span>Learn.</span><b>✺</b><span>Create.</span><b>✺</b><span>Grow.</span><b>✺</b><span>Light</span><b>✺</b><span>Shadow</span><b>✺</b><span>Intention</span><b>✺</b>
+  </div>
+</div>
+
+<!-- MANIFESTO (ivory) -->
+<section class="manifesto surface-ivory" id="manifesto">
+  <div class="wrap">
+    <p class="eyebrow"><i></i>The approach</p>
+    <p class="manifesto__text" id="manifestoText">
+      We teach through photographs, not theory. Real lighting set-ups, honest critique and creative projects that turn
+      <span class="pill-img" style="--img:url(../img/pattern-sm.webp);--pos:50% 38%"></span>
+      curious beginners into confident image-makers who know
+      <em>why</em> a picture works
+      <span class="pill-img" style="--img:url(../img/water-sm.webp);--pos:50% 45%"></span>
+      and how to make it again.
+    </p>
+    <div class="pillars">
+      <article class="pillar" data-reveal>
+        <span class="pillar__n">01</span>
+        <h3>Practical</h3>
+        <p>Every lesson is built around a photograph you can recreate: the light, the kit, the decisions behind it.</p>
+      </article>
+      <article class="pillar" data-reveal style="--d:.1s">
+        <span class="pillar__n">02</span>
+        <h3>Direct</h3>
+        <p>Clear explanations of the why as well as the how. No jargon without a plain-English translation.</p>
+      </article>
+      <article class="pillar" data-reveal style="--d:.2s">
+        <span class="pillar__n">03</span>
+        <h3>Creative</h3>
+        <p>Technique is the start. We help you build a style, a body of work and the confidence to share it.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- FOUR WAYS TO SHAPE LIGHT (dark) -->
+<section class="chapters surface-dark" id="light" aria-labelledby="lightH">
+  <div class="wrap">
+    <header class="sec-head">
+      <p class="eyebrow eyebrow--light"><i></i>The lighting studio</p>
+      <h2 id="lightH">Four ways to shape light.</h2>
+      <p class="sec-head__sub">Light is the one thing every photograph has in common. Choose a chapter and see what it can do.</p>
+    </header>
+
+    <div class="chapters__grid">
+      <div class="chapters__stage" id="chStage">
+        <figure class="ch-img is-active" data-i="0"><img src="assets/img/silhouette.webp" loading="lazy" alt="Low-key profile portrait of a woman with an afro, rim-lit, body falling into shadow"></figure>
+        <figure class="ch-img" data-i="1"><img src="assets/img/pattern.webp" loading="lazy" alt="Close portrait with butterfly-shaped patterned shadows across the eyes and cheeks"></figure>
+        <figure class="ch-img" data-i="2"><img src="assets/img/water.webp" loading="lazy" alt="Portrait of a person behind a sheet of water droplets against a vivid purple background"></figure>
+        <figure class="ch-img" data-i="3"><img src="assets/img/gel.webp" loading="lazy" alt="Portrait of a woman in glasses framed by a golden circle of gelled light"></figure>
+        <div class="chapters__count"><b id="chNum">01</b><span>/ 04</span></div>
+      </div>
+      <ol class="chapters__list" id="chList">
+        <li class="is-active" data-i="0" tabindex="0" role="button" data-cursor="View">
+          <span class="ch-n">01</span>
+          <div><h3>Low-key &amp; rim light</h3><p>Let the dark do the work. A single edge of light can say more than a fully lit frame.</p></div>
+        </li>
+        <li data-i="1" tabindex="0" role="button" data-cursor="View">
+          <span class="ch-n">02</span>
+          <div><h3>Patterned shadows</h3><p>Shape light with gobos and found textures to add depth, mood and story to a face.</p></div>
+        </li>
+        <li data-i="2" tabindex="0" role="button" data-cursor="View">
+          <span class="ch-n">03</span>
+          <div><h3>Texture &amp; colour</h3><p>Break the rules on purpose. Water, glass and gels for portraits that feel like art direction.</p></div>
+        </li>
+        <li data-i="3" tabindex="0" role="button" data-cursor="View">
+          <span class="ch-n">04</span>
+          <div><h3>Colour &amp; gels</h3><p>Paint a background from light itself, then place your subject inside it with control.</p></div>
+        </li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- COURSES (ivory) -->
+<section class="courses surface-ivory" id="courses" aria-labelledby="coursesH">
+  <div class="wrap">
+    <header class="sec-head sec-head--row">
+      <div>
+        <p class="eyebrow"><i></i>Online courses</p>
+        <h2 id="coursesH">Learn at your pace. Shoot with intention.</h2>
+      </div>
+      <a class="link-arrow" href="#courses" data-cursor="Go">View all courses <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </header>
+  </div>
+
+  <div class="rail" id="rail" data-cursor="Drag">
+    <div class="rail__track" id="railTrack">
+      <article class="card card--feature">
+        <a href="#courses" class="card__media"><img src="assets/img/bw.webp" loading="lazy" alt="Black and white portrait of a woman with a large afro, soft sculpted light"><span class="card__tag">Portrait · Lighting</span></a>
+        <div class="card__body">
+          <p class="card__kicker">Featured course</p>
+          <h3>Mastering Portrait Lighting</h3>
+          <p>Learn how to shape light, direct your subject and create portraits with intention.</p>
+          <a class="btn btn--dark magnetic" href="#courses">Explore course</a>
+        </div>
+      </article>
+      <article class="card">
+        <a href="#courses" class="card__media"><img src="assets/img/pattern-sm.webp" loading="lazy" alt="Close portrait with butterfly-shaped shadows"><span class="card__tag">Lighting</span></a>
+        <div class="card__body"><h3>The Creative Lighting Toolkit</h3><p>Gobos, gels and modifiers: how to build mood with a handful of tools.</p><span class="card__go">Explore course →</span></div>
+      </article>
+      <article class="card">
+        <a href="#courses" class="card__media"><img src="assets/img/texture-sm.webp" loading="lazy" alt="Close portrait with jewelled eye makeup and hands on chest"><span class="card__tag">Editing</span></a>
+        <div class="card__body"><h3>From Shoot to Final Edit</h3><p>A complete workflow that keeps skin texture and colour true to the image.</p><span class="card__go">Explore course →</span></div>
+      </article>
+      <article class="card">
+        <a href="#courses" class="card__media"><img src="assets/img/corp1-sm.webp" loading="lazy" alt="Corporate headshot of a woman in cream on a London rooftop"><span class="card__tag">Business</span></a>
+        <div class="card__body"><h3>Building a Commercial Portfolio</h3><p>Turn a skill into a service: clients, pricing and the work that wins them.</p><span class="card__go">Explore course →</span></div>
+      </article>
+      <article class="card">
+        <a href="#courses" class="card__media"><img src="assets/img/gel-sm.webp" loading="lazy" alt="Portrait framed by a golden circle of light"><span class="card__tag">Creative</span></a>
+        <div class="card__body"><h3>Colour, Gels &amp; Backgrounds</h3><p>Create vivid backdrops from light alone, in any room.</p><span class="card__go">Explore course →</span></div>
+      </article>
+      <div class="card card--end"><p>New courses<br>added regularly.</p><a class="btn btn--primary" href="#community">Get notified</a></div>
+    </div>
+    <div class="rail__bar"><span id="railProg"></span></div>
+  </div>
+</section>
+
+<!-- WORKSHOPS (dark) -->
+<section class="workshops surface-dark" id="workshops" aria-labelledby="wsH">
+  <div class="workshops__bg" data-parallax="0.12"><img src="assets/img/fur.webp" loading="lazy" alt="" aria-hidden="true"></div>
+  <div class="wrap workshops__grid">
+    <div class="workshops__lead">
+      <p class="eyebrow eyebrow--light"><i></i>In-person workshops</p>
+      <h2 id="wsH">Step into the studio.</h2>
+      <p class="sec-head__sub">Hands-on sessions where you light, direct and shoot real portraits alongside Joshua, then leave with images you made yourself.</p>
+      <ul class="ticks">
+        <li>Live lighting demonstrations</li>
+        <li>Shooting practice with models</li>
+        <li>Feedback on your own images</li>
+        <li>Accessibility details shared before booking</li>
+      </ul>
+    </div>
+    <div class="schedule" aria-label="Upcoming workshops">
+      <div class="schedule__head"><span>Upcoming sessions</span><span>Dates announced soon</span></div>
+      <a class="sched" href="#workshops" data-cursor="Book"><span class="sched__n">01</span><div><h3>Portrait Lighting Intensive</h3><p>Studio · London</p></div><span class="sched__cta">Join waitlist <i>→</i></span></a>
+      <a class="sched" href="#workshops" data-cursor="Book"><span class="sched__n">02</span><div><h3>Creative Colour &amp; Gels</h3><p>Studio · London</p></div><span class="sched__cta">Join waitlist <i>→</i></span></a>
+      <a class="sched" href="#workshops" data-cursor="Book"><span class="sched__n">03</span><div><h3>Studio Masterclass</h3><p>Studio · London</p></div><span class="sched__cta">Join waitlist <i>→</i></span></a>
+      <form class="waitlist" id="waitlist" novalidate>
+        <label for="wEmail" class="sr">Email address</label>
+        <input id="wEmail" type="email" placeholder="Your email for first access" autocomplete="email" required>
+        <button class="btn btn--primary" type="submit">Notify me</button>
+        <p class="form-note" id="wNote" role="status"></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- COMMUNITY (charcoal) -->
+<section class="community surface-charcoal" id="community" aria-labelledby="comH">
+  <div class="wrap">
+    <header class="sec-head sec-head--center">
+      <p class="eyebrow eyebrow--light"><i></i>The community</p>
+      <h2 id="comH">You don’t have to learn alone.</h2>
+      <p class="sec-head__sub">Share your work, take on monthly challenges and get honest feedback from photographers at every stage.</p>
+    </header>
+  </div>
+
+  <div class="wall" aria-label="Member work">
+    <div class="wall__col" data-speed="-0.06"><img src="assets/img/texture-sm.webp" loading="lazy" alt="Close portrait with jewelled eye makeup"><img src="assets/img/silhouette-sm.webp" loading="lazy" alt="Profile silhouette portrait"></div>
+    <div class="wall__col" data-speed="0.08"><img src="assets/img/gel-sm.webp" loading="lazy" alt="Portrait with golden light circle"><img src="assets/img/corp2-sm.webp" loading="lazy" alt="Smiling professional portrait on a rooftop"><img src="assets/img/bw-sm.webp" loading="lazy" alt="Black and white portrait"></div>
+    <div class="wall__col wall__col--mid" data-speed="-0.04"><img src="assets/img/water-sm.webp" loading="lazy" alt="Portrait behind water droplets"><img src="assets/img/fur-sm.webp" loading="lazy" alt="Portrait of a man in a fur-collared jacket"></div>
+    <div class="wall__col" data-speed="0.08"><img src="assets/img/pattern-sm.webp" loading="lazy" alt="Patterned shadow portrait"><img src="assets/img/rim-sm.webp" loading="lazy" alt="Rim-lit portrait"><img src="assets/img/corp1-sm.webp" loading="lazy" alt="Professional portrait in cream"></div>
+    <div class="wall__col" data-speed="-0.06"><img src="assets/img/fur-sm.webp" loading="lazy" alt="Portrait of a man in a fur-collared jacket"><img src="assets/img/texture-sm.webp" loading="lazy" alt="Close portrait with hands on chest"></div>
+  </div>
+
+  <div class="wrap">
+    <div class="perks">
+      <div class="perk" data-reveal><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="12" cy="12" r="3.5"/></svg><h3>Share your work</h3><p>Post images and get feedback that helps you improve.</p></div>
+      <div class="perk" data-reveal style="--d:.08s"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 20V8l8-4 8 4v12M9 20v-6h6v6"/></svg><h3>Monthly challenges</h3><p>A creative brief each month to keep you shooting.</p></div>
+      <div class="perk" data-reveal style="--d:.16s"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 5h16v11H9l-5 4z"/></svg><h3>Live Q&amp;A</h3><p>Ask questions and watch set-ups explained in real time.</p></div>
+      <div class="perk" data-reveal style="--d:.24s"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="8"/><path d="M12 4v16M4 12h16"/></svg><h3>Early access</h3><p>First call on workshops, courses and new resources.</p></div>
+    </div>
+    <div class="community__cta">
+      <a class="btn btn--primary btn--lg magnetic" href="https://www.skool.com/" target="_blank" rel="noopener">Join the community <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <p>Opens our Skool community.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT / COMMERCIAL (ivory) -->
+<section class="about surface-ivory" id="about" aria-labelledby="aboutH">
+  <div class="wrap about__grid">
+    <div class="about__imgs">
+      <img class="a1" src="assets/img/corp1.webp" loading="lazy" alt="Corporate portrait of a woman in cream with the London skyline behind">
+      <img class="a2" src="assets/img/corp2.webp" loading="lazy" alt="Smiling corporate portrait of a woman in black, London Eye behind">
+    </div>
+    <div class="about__copy">
+      <p class="eyebrow"><i></i>Taught by a working photographer</p>
+      <h2 id="aboutH">Real lessons from real shoots.</h2>
+      <p>Photography Here is created by Joshua Sokoya, a commercial photographer and videographer. Everything we teach is used on set, with real clients and real deadlines, then broken down so you can use it too.</p>
+      <p>Want to see the work behind the teaching? Explore the commercial portfolio.</p>
+      <div class="about__cta">
+        <a class="btn btn--dark magnetic" href="https://www.joshuasokoya.com" target="_blank" rel="noopener">Visit joshuasokoya.com ↗</a>
+        <a class="link-arrow" href="#about" data-cursor="Go">Meet Joshua <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- JOURNAL (ivory, silver rules) -->
+<section class="journal surface-ivory surface-ivory--alt" id="journal" aria-labelledby="jH">
+  <div class="wrap">
+    <header class="sec-head sec-head--row">
+      <div><p class="eyebrow"><i></i>The journal</p><h2 id="jH">Free tutorials and behind the scenes.</h2></div>
+      <a class="link-arrow" href="#journal" data-cursor="Go">All articles <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </header>
+    <div class="posts">
+      <a class="post post--lg" href="#journal" data-cursor="Read"><div class="post__img"><img src="assets/img/gel.webp" loading="lazy" alt="Portrait with a golden gelled-light circle"></div><div class="post__t"><span>Lighting · Tutorial</span><h3>How to paint a golden circle of light behind your subject</h3></div></a>
+      <a class="post" href="#journal" data-cursor="Read"><div class="post__img"><img src="assets/img/pattern-sm.webp" loading="lazy" alt="Patterned shadow portrait"></div><div class="post__t"><span>Creative · Tutorial</span><h3>Patterned shadows: where to place the light</h3></div></a>
+      <a class="post" href="#journal" data-cursor="Read"><div class="post__img"><img src="assets/img/silhouette-sm.webp" loading="lazy" alt="Silhouette portrait"></div><div class="post__t"><span>Behind the scenes</span><h3>One light, one dark room: the making of a low-key portrait</h3></div></a>
+      <a class="post" href="#journal" data-cursor="Read"><div class="post__img"><img src="assets/img/corp2-sm.webp" loading="lazy" alt="Rooftop corporate portrait"></div><div class="post__t"><span>Business</span><h3>Shooting headshots on location, in daylight</h3></div></a>
+    </div>
+  </div>
+</section>
+
+<!-- SHOP -->
+<section class="shop surface-dark" id="shop" aria-labelledby="shopH">
+  <div class="wrap shop__grid">
+    <div class="shop__lead">
+      <p class="eyebrow eyebrow--light"><i></i>Resources &amp; shop</p>
+      <h2 id="shopH">Take the lessons with you.</h2>
+      <p class="sec-head__sub">Guides, cheat sheets and presets designed to sit beside you on set. Merchandise is on its way.</p>
+      <a class="btn btn--ghost magnetic" href="#shop">Browse resources</a>
+    </div>
+    <div class="shop__cards">
+      <a class="prod" href="#shop" data-cursor="View">
+        <div class="prod__book"><i></i><b>Building<br>the Shot</b><small>Photography Here</small></div>
+        <h3>Guides &amp; cheat sheets</h3><p>Settings, kit and lighting diagrams in one clean reference.</p>
+      </a>
+      <a class="prod" href="#shop" data-cursor="View">
+        <div class="prod__img"><img src="assets/img/rim-sm.webp" loading="lazy" alt="Rim-lit portrait used to show a preset"></div>
+        <h3>Presets</h3><p>Edits that respect skin texture and original colour grading.</p>
+      </a>
+      <div class="prod prod--soon">
+        <div class="prod__soon"><span>Coming soon</span></div>
+        <h3>Merchandise</h3><p>Apparel and studio gear for image-makers.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CLOSING CTA -->
+<section class="finale surface-dark" aria-labelledby="finH">
+  <div class="finale__bg"><img src="assets/img/silhouette.webp" loading="lazy" alt="" aria-hidden="true"></div>
+  <div class="wrap finale__inner">
+    <p class="eyebrow eyebrow--light"><i></i>Start here</p>
+    <h2 id="finH">Your next photograph starts with better light.</h2>
+    <form class="news" id="news" novalidate>
+      <label class="sr" for="nEmail">Email address</label>
+      <input id="nEmail" type="email" placeholder="Enter your email" autocomplete="email" required>
+      <button class="btn btn--primary" type="submit">Get tutorials</button>
+      <p class="form-note" id="nNote" role="status">Tutorials and behind-the-scenes, in your inbox. Unsubscribe any time.</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__grid">
+    <div>
+      <a class="wordmark wordmark--lg" href="#top"><i class="wordmark__bar"></i><span class="wordmark__txt">Photography<br>Here</span></a>
+      <p class="footer__tag">Learn. Create. Grow.<br><span>Photography education by Joshua Sokoya.</span></p>
+    </div>
+    <nav aria-label="Learn"><h4>Learn</h4><a href="#courses">Courses</a><a href="#workshops">Workshops</a><a href="#journal">Journal</a><a href="#shop">Shop</a></nav>
+    <nav aria-label="Company"><h4>Company</h4><a href="#about">About</a><a href="#community">Community</a><a href="https://www.joshuasokoya.com" target="_blank" rel="noopener">Commercial portfolio ↗</a><a href="#">Contact</a></nav>
+    <nav aria-label="Follow"><h4>Follow</h4><a href="#">Instagram</a><a href="#">YouTube</a><a href="#">TikTok</a></nav>
+  </div>
+  <div class="footer__giant" aria-hidden="true">PHOTOGRAPHY HERE</div>
+  <div class="wrap footer__legal"><span>© 2026 Photography Here by Joshua Sokoya</span><span><a href="#">Privacy</a> · <a href="#">Terms</a> · <a href="#">Cookie preferences</a></span></div>
+</footer>
+
+<a class="notes-pill" href="notes.html" data-cursor="Read">Concept notes <span>↗</span></a>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

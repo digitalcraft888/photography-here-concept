@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Photography Here — Concept notes</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@600;700;800&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--obsidian:#101113;--charcoal:#292526;--silver:#D5D5D3;--ivory:#F4F0E9;--terracotta:#AC5035;--tl:#c4694c;--fd:"TT Interphases","Inter Tight",system-ui,sans-serif;--fb:"Poppins",system-ui,sans-serif;--g:clamp(20px,5vw,72px)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--ivory);color:var(--obsidian);font:400 16px/1.7 var(--fb);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+h1,h2,h3{font-family:var(--fd);font-weight:700;letter-spacing:-.02em;line-height:1.05;margin:0}
+.wrap{max-width:1180px;margin:0 auto;padding-inline:var(--g)}
+.top{position:sticky;top:0;z-index:10;background:rgba(16,17,19,.88);backdrop-filter:blur(12px);color:var(--ivory);display:flex;justify-content:space-between;align-items:center;padding:14px var(--g);font-size:13px;font-weight:500}
+.top a{text-decoration:none}.top .wm{display:flex;gap:10px;font-family:var(--fd);font-weight:700;text-transform:uppercase;line-height:1.02;font-size:14px}.top .wm i{width:4px;background:var(--terracotta)}
+.top .btn{background:var(--terracotta);padding:9px 16px;border-radius:999px}
+.hd{background:var(--obsidian);color:var(--ivory);padding:clamp(70px,10vw,140px) 0 clamp(60px,8vw,110px)}
+.eyebrow{display:inline-flex;gap:12px;align-items:center;font-size:12.5px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--silver);margin-bottom:22px}
+.eyebrow i{width:3px;height:18px;background:var(--terracotta)}
+.light .eyebrow{color:var(--charcoal)}
+.hd h1{font-size:clamp(2.6rem,7vw,6rem);max-width:15ch}
+.hd p{max-width:58ch;color:var(--silver);font-size:clamp(16px,1.4vw,19px);margin:26px 0 0}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:34px}
+.chips a{border:1.2px solid rgba(244,240,233,.35);padding:9px 16px;border-radius:999px;font-size:13px;text-decoration:none;transition:.3s}
+.chips a:hover{background:var(--ivory);color:var(--obsidian)}
+section{padding:clamp(64px,8vw,120px) 0}
+section h2{font-size:clamp(2rem,4.2vw,3.5rem);max-width:18ch;margin-bottom:clamp(28px,4vw,56px)}
+.dark{background:var(--obsidian);color:var(--ivory)}.dark .eyebrow{color:var(--silver)}
+.cols{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(24px,3vw,48px)}
+.cols.two{grid-template-columns:repeat(2,1fr)}
+.card{border-top:1px solid var(--silver);padding-top:22px}
+.dark .card{border-color:rgba(213,213,211,.2)}
+.card .n{font-size:12.5px;font-weight:500;letter-spacing:.14em;color:var(--terracotta)}.dark .card .n{color:var(--tl)}
+.card h3{font-size:1.4rem;margin:10px 0 10px}
+.card p,.card li{color:#4a4546;font-size:15px;margin:0 0 8px}.dark .card p,.dark .card li{color:var(--silver)}
+.card ul{padding-left:18px;margin:8px 0 0}
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:40px}
+.compare>div{padding:26px;border-radius:6px;font-size:15px}
+.compare .a{background:#e6e1d8}.compare .b{background:var(--obsidian);color:var(--ivory)}
+.compare h3{font-size:1.15rem;margin-bottom:10px}.compare ul{margin:0;padding-left:18px}.compare li{margin-bottom:6px}
+.phones{display:flex;gap:clamp(24px,5vw,72px);justify-content:center;flex-wrap:wrap;margin-top:20px}
+.phone{width:300px}
+.phone .bz{width:300px;height:620px;border-radius:44px;background:#000;padding:10px;box-shadow:0 40px 80px -30px #000,0 0 0 1.5px #3a3638 inset;position:relative;overflow:hidden}
+.phone .bz::before{content:"";position:absolute;left:50%;top:14px;width:84px;height:22px;border-radius:99px;background:#000;transform:translateX(-50%);z-index:3}
+.phone iframe{width:390px;height:844px;border:0;border-radius:34px;transform:scale(.7436);transform-origin:0 0;background:var(--obsidian)}
+.phone figcaption{text-align:center;color:var(--silver);font-size:13px;margin-top:18px}
+.tbl{width:100%;border-collapse:collapse;font-size:14.5px;margin-top:8px}
+.tbl th,.tbl td{text-align:left;padding:13px 14px 13px 0;border-bottom:1px solid var(--silver);vertical-align:top}
+.dark .tbl th,.dark .tbl td{border-color:rgba(213,213,211,.2)}
+.tbl th{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--terracotta);font-weight:500}.dark .tbl th{color:var(--tl)}
+.funnel{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin-top:10px}
+.funnel div{background:var(--charcoal);padding:22px;color:var(--ivory)}
+.funnel b{display:block;font-family:var(--fd);font-size:1.25rem;margin-bottom:6px}
+.funnel span{font-size:13.5px;color:var(--silver);display:block}
+.swatches{display:flex;gap:0;margin:0 0 30px;border-radius:6px;overflow:hidden;max-width:620px}
+.swatches div{flex:1;padding:44px 10px 12px;font-size:11px;font-weight:500;letter-spacing:.06em}
+.note{background:#e6e1d8;padding:20px 24px;border-left:3px solid var(--terracotta);font-size:14.5px;margin-top:30px;border-radius:0 4px 4px 0}
+footer{background:var(--obsidian);color:var(--silver);padding:44px 0;font-size:13px}
+@media(max-width:900px){.cols,.cols.two,.compare,.funnel{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="top"><a class="wm" href="index.html"><i></i><span>Photography<br>Here</span></a><a class="btn" href="index.html">← View homepage</a></div>
+
+<header class="hd">
+  <div class="wrap">
+    <p class="eyebrow"><i></i>Design trial · Concept notes</p>
+    <h1>Light is the lesson. The site should teach it.</h1>
+    <p>A homepage concept for Photography Here by Joshua Sokoya: the creative thinking, a mobile preview, how I would build it in WordPress and how it could grow courses, workshops and community.</p>
+    <nav class="chips" aria-label="Sections"><a href="#idea">01 Creative decisions</a><a href="#mobile">02 Mobile</a><a href="#audience">03 Audience</a><a href="#wp">04 WordPress build</a><a href="#growth">05 Growth</a><a href="#open">06 Assumptions</a></nav>
+  </div>
+</header>
+
+<section id="idea" class="light"><div class="wrap">
+  <p class="eyebrow"><i></i>01 · Creative decisions</p>
+  <h2>One idea, carried through every scroll.</h2>
+  <div class="cols">
+    <article class="card"><span class="n">THE HERO</span><h3>Type that sits behind the subject</h3><p>The hero portrait is cut out so the oversized wordmark sits <em>behind</em> her hair. It is a depth effect that feels cinematic and editorial, and it only works because the photography is this strong. A moving “light” brightens the letters as you move across the page, a literal version of what Joshua teaches.</p></article>
+    <article class="card"><span class="n">THE RHYTHM</span><h3>Dark hero, ivory content, dark again</h3><p>Exactly the rhythm in the brand book. Obsidian frames the dramatic work; ivory makes courses, journal and learning content easy to read. Terracotta is used only for actions and small marks, never as a large block.</p></article>
+    <article class="card"><span class="n">THE PHOTOGRAPHY</span><h3>Teach through the pictures</h3><p>“Four ways to shape light” turns the brand book’s art-direction categories (rim light, patterned shadows, texture and colour, gels) into an interactive lesson. Visitors learn something in the first 30 seconds, which shows the teaching style before they buy.</p></article>
+  </div>
+  <div class="cols" style="margin-top:36px">
+    <article class="card"><span class="n">THE EXPERIENCE</span><h3>Immersive, but never in the way</h3><p>A short loader, a drifting light, scroll-filled manifesto text, a draggable course rail, a parallax member wall and a full-screen mobile menu. Everything respects <code>prefers-reduced-motion</code> and stays keyboard accessible.</p></article>
+    <article class="card"><span class="n">THE BRAND</span><h3>Brand book, followed</h3><p>Only the five approved colours. Poppins 400/500 for body and UI. Headings use TT Interphases’ role, with Inter Tight as a stand-in until licensed files arrive. British English, “you”, action-led buttons, and <strong>no invented prices, dates or statistics</strong>.</p></article>
+    <article class="card"><span class="n">THE ARCHITECTURE</span><h3>Education brand, with an endorsement</h3><p>“By Joshua Sokoya” appears as a quiet endorsement, not a second logo, and a dedicated section sends qualified visitors to joshuasokoya.com. This keeps the two brands distinct but connected.</p></article>
+  </div>
+  <div class="compare">
+    <div class="a"><h3>What I moved away from</h3><ul><li>Template-style card grids with stock-like icon rows</li><li>Small hero image with text crowding the subject</li><li>Every section looking the same</li><li>Prices and dates on a design that cannot confirm them</li></ul></div>
+    <div class="b"><h3>What this concept does instead</h3><ul><li>One commanding image with scale, negative space and depth</li><li>Varied section formats: rail, schedule, wall, lesson stage</li><li>Photography as the identity, cropped around the eyes</li><li>Honest “coming soon” states that still capture leads</li></ul></div>
+  </div>
+</div></section>
+
+<section id="mobile" class="dark"><div class="wrap">
+  <p class="eyebrow"><i></i>02 · Mobile hero and navigation</p>
+  <h2>Built mobile-first, not squeezed down.</h2>
+  <p style="max-width:62ch;color:var(--silver)">On a phone the wordmark stacks into two giant lines, the portrait drops beneath them and the call to action sits in thumb reach. The menu opens as a circular reveal from the burger. Both previews below are the live site.</p>
+  <div class="phones">
+    <figure class="phone"><div class="bz"><iframe src="index.html" title="Mobile hero preview" loading="lazy"></iframe></div><figcaption>Mobile hero (live)</figcaption></figure>
+    <figure class="phone"><div class="bz"><iframe src="index.html?menu=1" title="Mobile menu preview" loading="lazy"></iframe></div><figcaption>Mobile navigation (live)</figcaption></figure>
+  </div>
+</div></section>
+
+<section id="audience" class="light"><div class="wrap">
+  <p class="eyebrow"><i></i>03 · Why it works for the audience</p>
+  <h2>Three visitors, one clear path each.</h2>
+  <div class="cols">
+    <article class="card"><span class="n">CURIOUS BEGINNER</span><h3>“Can I actually learn this?”</h3><p>Plain-English copy, “Practical / Direct / Creative” promise, free journal tutorials and a visible community. Low-risk first steps before any purchase.</p></article>
+    <article class="card"><span class="n">PROGRESSING PORTRAIT PHOTOGRAPHER</span><h3>“Show me the lighting.”</h3><p>The lighting studio, featured course and workshop schedule speak directly to people who already shoot and want control of light.</p></article>
+    <article class="card"><span class="n">WORKING CREATIVE</span><h3>“Can I trust this teacher?”</h3><p>The commercial link, real shoot imagery and business-focused course prove the teaching comes from working practice.</p></article>
+  </div>
+  <div class="funnel" style="margin-top:40px">
+    <div><b>Attract</b><span>Hero, journal, free tutorials, social proof</span></div>
+    <div><b>Engage</b><span>Lighting studio, community wall, email sign-up</span></div>
+    <div><b>Convert</b><span>Courses, workshop waitlist, resources shop</span></div>
+    <div><b>Retain</b><span>Community, new courses, early access</span></div>
+  </div>
+</div></section>
+
+<section id="wp" class="dark"><div class="wrap">
+  <p class="eyebrow"><i></i>04 · Building it in WordPress</p>
+  <h2>Fast, editable, and easy to grow.</h2>
+  <div class="cols">
+    <article class="card"><span class="n">FOUNDATION</span><h3>Custom block theme</h3><ul><li>Lightweight block (full-site-editing) theme. Brand tokens (colours, type scale, spacing) live in <code>theme.json</code>, so styles stay consistent.</li><li>Reusable patterns for hero, course rail, schedule, wall, CTA bands; the team edits content without touching code.</li><li>ACF Pro (or native block.json) for custom fields on courses and workshops.</li><li>Fonts self-hosted (Poppins, licensed TT Interphases); no render-blocking third-party requests.</li></ul></article>
+    <article class="card"><span class="n">CONTENT MODEL</span><h3>Structured, filterable content</h3><ul><li>Custom post types: Course, Workshop, Resource; Journal uses standard posts.</li><li>Taxonomies: category, level, format, so the catalogue filters instantly.</li><li>Level, duration and price fields show only when filled, matching the brand rule “only when confirmed”.</li><li>Rank Math with Course, Event, Product and Organisation schema for rich results.</li></ul></article>
+    <article class="card"><span class="n">COMMERCE &amp; LEARNING</span><h3>Right tool per job</h3><ul><li>Courses: LearnDash or Tutor LMS (to be chosen with Joshua based on drip, certificates and budget).</li><li>Digital products, presets, merch: WooCommerce with Stripe/PayPal; digital downloads and later print-on-demand.</li><li>Workshops: Events Calendar + Event Tickets, or WooCommerce Bookings, with waitlist, deposits and capacity limits.</li><li>Community stays on Skool, linked and tracked.</li></ul></article>
+  </div>
+  <div class="cols" style="margin-top:36px">
+    <article class="card"><span class="n">PERFORMANCE</span><h3>Cinematic, still fast</h3><ul><li>Responsive WebP/AVIF with <code>srcset</code>; hero preloaded; below-fold lazy-loaded.</li><li>Motion in a small vanilla-JS module loaded on the homepage only. No heavy page-builder bundle.</li><li>Full-page caching and CDN (WP Rocket or LiteSpeed plus Cloudflare). Targets: green Core Web Vitals on mobile.</li></ul></article>
+    <article class="card"><span class="n">MARKETING STACK</span><h3>Measure everything</h3><ul><li>GA4 + GTM with events for course views, add-to-cart, waitlist, Skool clicks and portfolio clicks.</li><li>Email via Kit/ConvertKit, MailerLite or FluentCRM with tags per interest (courses, workshops, community).</li><li>Meta pixel and conversions API for retargeting, behind consent.</li></ul></article>
+    <article class="card"><span class="n">PROCESS</span><h3>Safe to ship, safe to change</h3><ul><li>Staging environment; Git-based deploys; test checkout and forms before launch.</li><li>Accessibility pass (contrast, focus states, alt text, reduced motion).</li><li>Security and backups: Cloudflare, Wordfence or similar, daily offsite backups.</li><li>Handover docs and short video walkthroughs for the team.</li></ul></article>
+  </div>
+  <table class="tbl" style="margin-top:44px"><thead><tr><th>Phase</th><th>What happens</th></tr></thead><tbody>
+    <tr><td>1 · Foundations</td><td>Design system, theme, homepage, Courses and Journal templates, SEO setup, analytics</td></tr>
+    <tr><td>2 · Learning</td><td>LMS, first course live, checkout, email automations</td></tr>
+    <tr><td>3 · Workshops &amp; shop</td><td>Event booking, waitlist, resources store, merch later</td></tr>
+    <tr><td>4 · Optimise</td><td>A/B tests, content cadence, cross-links with joshuasokoya.com, performance and CRO ongoing</td></tr>
+  </tbody></table>
+</div></section>
+
+<section id="growth" class="light"><div class="wrap">
+  <p class="eyebrow"><i></i>05 · Helping the business grow</p>
+  <h2>Every section has a job.</h2>
+  <div class="cols">
+    <article class="card"><span class="n">COURSE SALES</span><h3>Show the teaching, then sell it</h3><ul><li>A featured course with a clear outcome in the first scroll.</li><li>Free preview lessons and journal tutorials feed an email list that is nurtured towards the course.</li><li>Student work and verified testimonials added as soon as they exist, never invented.</li><li>Bundles, early-bird launches and retargeting for course-page visitors.</li></ul></article>
+    <article class="card"><span class="n">WORKSHOP BOOKINGS</span><h3>Capture demand before dates exist</h3><ul><li>The waitlist works now and builds a ready audience for each release.</li><li>Clear location, inclusions and accessibility information remove booking friction.</li><li>Honest scarcity (capacity from the event system), deposit option and an email sequence leading up to release.</li><li>Past-workshop galleries become social proof.</li></ul></article>
+    <article class="card"><span class="n">COMMUNITY</span><h3>Make joining feel like belonging</h3><ul><li>Member work wall and monthly challenges show life inside, before the click.</li><li>A tracked link into Skool, with a free tier or challenge as a low-commitment doorway if Joshua wants one.</li><li>Members become the pipeline for courses and workshops, and the source of content.</li></ul></article>
+  </div>
+  <div class="cols two" style="margin-top:36px">
+    <article class="card"><span class="n">TWO BRANDS, ONE FLYWHEEL</span><h3>Education feeds commercial, commercial feeds education</h3><p>Behind-the-scenes from commercial shoots becomes journal content and course case studies. The “working photographer” credibility sends students to Photography Here, while the About section sends serious prospects to joshuasokoya.com. Shared analytics tracks both directions.</p></article>
+    <article class="card"><span class="n">WHAT I WOULD MEASURE</span><h3>Simple KPIs, reviewed monthly</h3><p>Email sign-ups per 100 visitors, course page → checkout rate, workshop waitlist size and conversion to booking, Skool joins from the site, returning visitors, Core Web Vitals. Targets are set after a baseline month, not guessed.</p></article>
+  </div>
+</div></section>
+
+<section id="open" class="dark"><div class="wrap">
+  <p class="eyebrow"><i></i>06 · Assumptions and open items</p>
+  <h2>What is placeholder, and what I need.</h2>
+  <div class="swatches" aria-label="Palette used"><div style="background:#101113;color:#F4F0E9;border:1px solid #3a3638">OBSIDIAN<br>#101113</div><div style="background:#292526;color:#F4F0E9">CHARCOAL<br>#292526</div><div style="background:#D5D5D3;color:#101113">SILVER<br>#D5D5D3</div><div style="background:#F4F0E9;color:#101113">IVORY<br>#F4F0E9</div><div style="background:#AC5035;color:#F4F0E9">TERRACOTTA<br>#AC5035</div></div>
+  <table class="tbl"><thead><tr><th>Item</th><th>Status</th></tr></thead><tbody>
+    <tr><td>TT Interphases</td><td>Not publicly available. Inter Tight is a stand-in; the CSS lists TT Interphases first, so licensed files drop in with no redesign.</td></tr>
+    <tr><td>Course, workshop and journal titles</td><td>Concept copy (some taken from the brand book). Prices, durations, levels and dates deliberately left out until confirmed.</td></tr>
+    <tr><td>Photography</td><td>Joshua’s supplied images only, resized for web. “Member work” wall uses the same images as stand-ins.</td></tr>
+    <tr><td>Founder portrait, testimonials, credentials</td><td>Needed for the About section and social proof; nothing invented.</td></tr>
+    <tr><td>Skool, social and contact links</td><td>Placeholders to be replaced with the real URLs.</td></tr>
+    <tr><td>Forms</td><td>Front-end demo only; production uses the email platform and Fluent Forms or Gravity Forms.</td></tr>
+    <tr><td>Wordmark</td><td>Brand book marks it “concept, not final artwork”; set in type for now.</td></tr>
+  </tbody></table>
+</div></section>
+
+<footer><div class="wrap">Photography Here by Joshua Sokoya · Homepage concept for design trial · <a href="index.html">Back to the homepage</a></div></footer>
+</body>
+</html>
