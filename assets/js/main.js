@@ -38,6 +38,17 @@
     let mx = innerWidth / 2, my = innerHeight / 2, rx = mx, ry = my;
     addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; dot.style.transform = `translate(${mx}px,${my}px) translate(-50%,-50%)`; }, { passive: true });
     (function loop() { rx += (mx - rx) * .16; ry += (my - ry) * .16; ring.style.transform = `translate(${rx}px,${ry}px) translate(-50%,-50%)`; requestAnimationFrame(loop); })();
+    // adapt cursor colour to the surface underneath
+    const TONES = '.card--feature,.card--end,.card__media,.post__img,.path__img,.about__imgs,.prod__book,.surface-ivory,.surface-dark,.surface-charcoal,.hero,.footer,.nav,.menu,.finale,.marquee,.sticky-cta';
+    const LIGHT = '.prod__book,.surface-ivory';
+    let toneTick = 0;
+    const readTone = () => {
+      const el = document.elementFromPoint(mx, my); if (!el) return;
+      const host = el.closest(TONES);
+      cursor.classList.toggle('on-light', !!(host && host.matches(LIGHT)));
+    };
+    addEventListener('mousemove', () => { if (++toneTick % 4 === 0) readTone(); }, { passive: true });
+    addEventListener('scroll', () => requestAnimationFrame(readTone), { passive: true });
     document.addEventListener('mouseover', e => {
       const t = e.target.closest('[data-cursor]');
       if (t) { label.textContent = t.dataset.cursor; cursor.classList.add('is-label'); } else cursor.classList.remove('is-label');
@@ -100,8 +111,20 @@
     lastY = y;
   }, { passive: true });
 
+  /* ---------- Sticky mobile CTA ---------- */
+  const sticky = $('#stickyCta'), fin = $('.finale'), com = $('#community');
+  const stickyCheck = () => {
+    const past = scrollY > innerHeight * .8;
+    const fr = fin.getBoundingClientRect(), cr = com.getBoundingClientRect();
+    const hide = (fr.top < innerHeight * .6) || (cr.top < innerHeight * .5 && cr.bottom > innerHeight * .3);
+    const on = past && !hide && !body.classList.contains('menu-open');
+    sticky.classList.toggle('show', on); sticky.setAttribute('aria-hidden', !on);
+    $$('a', sticky).forEach(a => a.tabIndex = on ? 0 : -1);
+  };
+  addEventListener('scroll', stickyCheck, { passive: true }); stickyCheck();
+
   /* ---------- Reveal on scroll ---------- */
-  const revealSel = '[data-reveal], .sec-head, .about__copy > *, .about__imgs img, .post, .prod, .schedule, .workshops__lead > *, .finale__inner > *, .community__cta, .card';
+  const revealSel = '[data-reveal], .path, .outcomes li, .faq__item, .sec-head, .about__copy > *, .about__imgs img, .post, .prod, .schedule, .workshops__lead > *, .finale__inner > *, .community__cta, .card';
   const io = new IntersectionObserver(es => es.forEach(e => {
     if (e.isIntersecting) {
       const el = e.target;

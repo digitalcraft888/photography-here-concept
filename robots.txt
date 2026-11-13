@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://digitalcraft888.github.io/photography-here-concept/sitemap.xml
