@@ -329,8 +329,13 @@ section{position:relative}
 .prod__book b{font-family:var(--f-display);font-weight:800;font-size:clamp(1.4rem,2.2vw,2.1rem);line-height:.98;letter-spacing:-.03em;margin-left:14px;text-transform:uppercase;margin-top:12px}
 .prod__book small{margin-left:14px;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#4a4546}
 .prod__img img{width:100%;height:100%;object-fit:cover;filter:grayscale(.2)}
-.prod__soon{border:1.5px dashed rgba(213,213,211,.35);display:grid;place-items:center}
-.prod__soon span{font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--silver)}
+.prod__soon{background:var(--charcoal);display:grid;place-items:center;border:1px solid rgba(213,213,211,.14)}
+.prod__soon svg{width:78%;height:auto;transition:transform .7s var(--ease)}
+.prod--soon:hover .prod__soon svg{transform:translateY(-6px) rotate(-1.5deg)}
+.tee{fill:var(--obsidian);stroke:rgba(213,213,211,.55);stroke-width:1.4;stroke-linejoin:round}
+.tee-neck{fill:none;stroke:rgba(213,213,211,.4);stroke-width:1.2}
+.tee-t{font-family:var(--f-display);font-weight:800;font-size:9px;letter-spacing:.01em;fill:var(--ivory)}
+.prod__pill{position:absolute;left:12px;top:12px;font-weight:500;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;background:var(--terracotta);color:var(--ivory);padding:6px 11px;border-radius:999px}
 
 /* ---------- Finale ---------- */
 .finale{padding:clamp(110px,14vw,220px) 0;overflow:hidden;isolation:isolate;text-align:center}
