@@ -218,13 +218,47 @@
     track.addEventListener('dragstart', e => e.preventDefault());
   }
 
-  /* ---------- Parallax (wall columns + workshop bg) ---------- */
-  const cols = $$('.wall__col'), wall = $('.wall'), wbg = $('[data-parallax]');
+  /* ---------- Community wall: endless vertical drift ---------- */
+  (function wallLoop() {
+    const wallEl = $('.wall'); if (!wallEl) return;
+    const built = $$('.wall__col', wallEl).map(col => {
+      const track = document.createElement('div'); track.className = 'wall__track';
+      const set = document.createElement('div'); set.className = 'wall__set';
+      while (col.firstChild) set.appendChild(col.firstChild);
+      track.appendChild(set); col.appendChild(track);
+      return { track, set };
+    });
+    const build = () => {
+      const wh = wallEl.clientHeight;
+      built.forEach(({ track, set }, i) => {
+        $$('.wall__set[data-clone]', track).forEach(n => n.parentNode.removeChild(n));
+        const gap = parseFloat(getComputedStyle(set).paddingBottom) || 0;
+        const h = set.getBoundingClientRect().height;
+        if (!h) return;
+        const copies = Math.ceil(wh / h) + 1;
+        for (let k = 0; k < copies; k++) {
+          const c = set.cloneNode(true); c.dataset.clone = '1'; c.setAttribute('aria-hidden', 'true');
+          $$('img', c).forEach(im => { im.alt = ''; im.loading = 'eager'; });
+          track.appendChild(c);
+        }
+        const speed = [26, 34, 22, 38, 28][i % 5];
+        track.style.setProperty('--shift', h + 'px');
+        track.style.setProperty('--dur', (h / speed).toFixed(1) + 's');
+        track.classList.toggle('is-down', i % 2 === 1);
+      });
+    };
+    const ready = () => setTimeout(build, 60);
+    ready();
+    addEventListener('load', ready);
+    let rt; addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(build, 200); });
+  })();
+
+  /* ---------- Parallax (workshop bg) ---------- */
+  const wall = $('.wall'), wbg = $('[data-parallax]');
   function par() {
     const r = wall.getBoundingClientRect();
     if (r.bottom > 0 && r.top < innerHeight) {
       const c = (r.top + r.height / 2 - innerHeight / 2);
-      cols.forEach(col => col.style.transform = `translateY(${c * parseFloat(col.dataset.speed) * 2.4}px)`);
     }
     if (wbg) { const b = wbg.parentElement.getBoundingClientRect(); if (b.bottom > 0 && b.top < innerHeight) wbg.style.transform = `translateY(${(b.top + b.height / 2 - innerHeight / 2) * -.08}px)`; }
   }
