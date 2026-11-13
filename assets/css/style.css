@@ -224,7 +224,7 @@ section{position:relative}
 .courses{padding:clamp(90px,11vw,160px) 0 clamp(80px,9vw,130px);overflow:hidden}
 .rail{position:relative;cursor:grab}
 .rail.is-drag{cursor:grabbing}
-.rail__track{display:flex;gap:clamp(16px,2vw,28px);overflow-x:auto;scroll-snap-type:x proximity;padding:8px max(var(--gut),calc((100vw - var(--max))/2 + var(--gut))) 12px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.rail__track{display:flex;gap:clamp(16px,2vw,28px);overflow-x:auto;overflow-y:hidden;overscroll-behavior-x:contain;scroll-snap-type:x proximity;padding:8px max(var(--gut),calc((100vw - var(--max))/2 + var(--gut))) 12px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
 .rail__track::-webkit-scrollbar{display:none}
 .rail.is-drag .rail__track{scroll-snap-type:none;scroll-behavior:auto}
 .card{flex:0 0 clamp(260px,26vw,370px);scroll-snap-align:start;display:flex;flex-direction:column;gap:18px}
