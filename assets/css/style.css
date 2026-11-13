@@ -511,15 +511,20 @@ section{position:relative}
 .why span{font-weight:500;font-size:13px;letter-spacing:.12em;color:var(--terracotta-lt);padding-top:6px}
 .why h3{font-size:clamp(1.25rem,1.9vw,1.7rem);margin-bottom:8px}
 .why p{color:var(--silver);font-size:15px;max-width:52ch}
-.stories{display:grid;gap:16px}
+.stories{display:grid;gap:14px}
 .stories__label{font-weight:500;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--silver);display:flex;flex-direction:column;gap:4px}
 .stories__label em{font-style:normal;text-transform:none;letter-spacing:0;font-size:12px;color:var(--terracotta-lt)}
-.story{margin:0;background:var(--charcoal);border-radius:6px;padding:clamp(20px,2.4vw,30px);color:var(--terracotta-lt)}
-.story blockquote{margin:18px 0 22px;display:grid;gap:10px}
+.story{margin:0;background:var(--charcoal);border-radius:6px;padding:clamp(20px,2.2vw,28px);color:var(--terracotta-lt);transition:transform .6s var(--ease),background .4s}
+.story:hover{transform:translateY(-4px);background:#312d2e}
+.story blockquote p{margin:0;font-family:var(--f-display);font-weight:600;font-size:clamp(1.02rem,1.25vw,1.2rem);line-height:1.38;letter-spacing:-.01em;color:var(--ivory)}
+.story figcaption span b{display:block;font-weight:500;font-size:14px;color:var(--ivory);line-height:1.3}
+.story figcaption small{display:block;font-size:12.5px;color:var(--silver);line-height:1.4}
+.story__tag{margin-left:auto;font-style:normal;font-weight:500;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--terracotta-lt);border:1px solid rgba(196,105,76,.5);padding:5px 10px;border-radius:999px;white-space:nowrap}
+.story blockquote{margin:16px 0 22px}
 .story figcaption{display:flex;align-items:center;gap:12px}
 .skel{display:block;height:10px;border-radius:99px;background:rgba(213,213,211,.16)}
 .w90{width:90%}.w85{width:85%}.w75{width:75%}.w70{width:70%}.w60{width:60%}.w55{width:55%}.w40{width:40%;height:9px}.w35{width:35%;height:9px}
-.avatar{width:38px;height:38px;border-radius:50%;background:rgba(213,213,211,.2);display:block}
+.avatar{flex:0 0 40px;width:40px;height:40px;border-radius:50%;background:rgba(213,213,211,.14);border:1px solid rgba(213,213,211,.25);display:grid;place-items:center;font-style:normal;font-weight:500;font-size:12px;letter-spacing:.06em;color:var(--ivory)}
 @media (max-width:1100px){
   .trustbar__list{grid-template-columns:1fr 1fr;row-gap:30px}
   .trustbar li:nth-child(odd){padding-left:0;border-left:0}
@@ -533,6 +538,8 @@ section{position:relative}
   .trustbar li svg{flex:0 0 22px;padding:11px}
   .trustbar li b{margin-bottom:3px;font-size:1.05rem}
   .why li{grid-template-columns:40px 1fr}
+  .story figcaption{flex-wrap:wrap}
+  .story__tag{margin-left:52px}
 }
 
 /* ---------- Sticky mobile CTA ---------- */
