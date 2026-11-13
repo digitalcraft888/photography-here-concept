@@ -532,11 +532,13 @@ section{position:relative}
   .trust__grid{grid-template-columns:1fr}
 }
 @media (max-width:560px){
-  .trustbar__list{grid-template-columns:1fr;row-gap:0;padding-block:8px}
-  .trustbar li{flex-direction:row;align-items:center;gap:16px;padding:20px 0;border-left:0!important}
-  .trustbar li+li{border-top:1px solid rgba(213,213,211,.12)}
-  .trustbar li svg{flex:0 0 22px;padding:11px}
-  .trustbar li b{margin-bottom:3px;font-size:1.05rem}
+  .trustbar__list{grid-template-columns:1fr 1fr;row-gap:0;column-gap:0;padding-block:4px}
+  .trustbar li{flex-direction:column;align-items:flex-start;gap:14px;padding:24px 14px 24px 0!important;border-left:0!important;border-top:0}
+  .trustbar li:nth-child(even){padding:24px 0 24px 16px!important;border-left:1px solid rgba(213,213,211,.12)!important}
+  .trustbar li:nth-child(n+3){border-top:1px solid rgba(213,213,211,.12)}
+  .trustbar li svg{width:20px;height:20px;padding:11px}
+  .trustbar li span{max-width:none;font-size:12.5px;line-height:1.5}
+  .trustbar li b{margin-bottom:6px;font-size:1rem}
   .why li{grid-template-columns:40px 1fr}
   .story figcaption{flex-wrap:wrap}
   .story__tag{margin-left:52px}
@@ -602,4 +604,9 @@ section{position:relative}
   .promise p{grid-column:2}
   .promise h3{grid-column:2;margin-bottom:6px}
   .story--feature::after{opacity:.1}
+}
+
+@media (max-width:360px){
+  .sticky-cta .btn,.hero__cta .btn{font-size:12.5px;padding-inline:8px}
+  .trustbar li b{font-size:.95rem}
 }
