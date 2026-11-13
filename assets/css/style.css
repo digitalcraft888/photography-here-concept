@@ -479,6 +479,18 @@ section{position:relative}
 .faq__item p{color:#4a4546;padding:0 52px 26px 0;max-width:62ch;animation:faqIn .5s var(--ease)}
 @keyframes faqIn{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}
 
+/* ---------- Chapters: tap / swipe to change (mobile) ---------- */
+.chapters__nav{display:none}
+.chapters__stage{scroll-margin-top:calc(var(--nav-h) + 8px)}
+@media (max-width:860px){
+  .chapters__stage{aspect-ratio:1/1.05;touch-action:pan-y}
+  .chapters__nav{display:flex;gap:10px;position:absolute;left:14px;bottom:14px;z-index:6}
+  .chapters__nav button{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:rgba(16,17,19,.62);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid rgba(244,240,233,.35);color:var(--ivory);transition:background .3s}
+  .chapters__nav button:active{background:var(--terracotta);border-color:var(--terracotta)}
+  .chapters__list li.is-active::before{transition:none;width:100%}
+  .chapters__list li{padding:24px 0}
+}
+
 /* ---------- Sticky mobile CTA ---------- */
 .sticky-cta{display:none}
 @media (max-width:1100px){

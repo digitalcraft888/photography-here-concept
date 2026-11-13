@@ -159,7 +159,7 @@
   addEventListener('scroll', fillWords, { passive: true }); fillWords();
 
   /* ---------- Chapters ---------- */
-  const imgs = $$('.ch-img'), items = $$('#chList li'), chNum = $('#chNum');
+  const chStage = $('#chStage'), imgs = $$('.ch-img'), items = $$('#chList li'), chNum = $('#chNum');
   const DUR = 6000; let cur = 0, timer = null, chVisible = false, paused = false;
   function go(i) {
     if (i === cur && items[i].classList.contains('is-active')) return;
@@ -173,9 +173,13 @@
     chNum.textContent = String(i + 1).padStart(2, '0');
     schedule();
   }
-  function schedule() { clearTimeout(timer); if (reduce || paused || !chVisible) return; timer = setTimeout(() => go((cur + 1) % items.length), DUR); }
+  const mobileMQ = matchMedia('(max-width:860px), (hover:none)');
+  function schedule() { clearTimeout(timer); if (reduce || paused || !chVisible || mobileMQ.matches) return; timer = setTimeout(() => go((cur + 1) % items.length), DUR); }
   items.forEach((li, i) => {
-    li.addEventListener('click', () => { paused = false; go(i); });
+    li.addEventListener('click', () => {
+      paused = false; go(i);
+      if (mobileMQ.matches) { const r = chStage.getBoundingClientRect(); if (r.top < 60 || r.bottom > innerHeight) chStage.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' }); }
+    });
     li.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(i); } });
     li.addEventListener('mouseenter', () => { if (fine) { paused = true; clearTimeout(timer); go(i); } });
     li.addEventListener('mouseleave', () => { paused = false; schedule(); });
@@ -185,6 +189,16 @@
     if (chVisible) { items[cur].style.setProperty('--dur', DUR + 'ms'); schedule(); } else clearTimeout(timer);
   }, { threshold: .35 }).observe($('.chapters__grid'));
   items[0].style.setProperty('--dur', DUR + 'ms');
+  const step = d => { paused = false; go((cur + d + items.length) % items.length); };
+  $('#chPrev').addEventListener('click', () => step(-1));
+  $('#chNext').addEventListener('click', () => step(1));
+  let tx0 = 0, ty0 = 0;
+  chStage.addEventListener('touchstart', e => { tx0 = e.touches[0].clientX; ty0 = e.touches[0].clientY; }, { passive: true });
+  chStage.addEventListener('touchend', e => {
+    const dx = e.changedTouches[0].clientX - tx0, dy = e.changedTouches[0].clientY - ty0;
+    if (Math.abs(dx) > 45 && Math.abs(dx) > Math.abs(dy) * 1.4) step(dx < 0 ? 1 : -1);
+  }, { passive: true });
+  if (mobileMQ.addEventListener) mobileMQ.addEventListener('change', schedule);
 
   /* ---------- Course rail: drag + progress ---------- */
   const rail = $('#rail'), track = $('#railTrack'), prog = $('#railProg');
